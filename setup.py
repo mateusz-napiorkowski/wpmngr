@@ -11,7 +11,7 @@ setuptools.setup(
     description="Wallpaper manager for Xfce",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/pypa/sampleproject",
+    url="https://github.com/mateusz-napiorkowski/wpmngr",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
