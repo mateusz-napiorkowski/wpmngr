@@ -1,3 +1,3 @@
-#wpmngr
+# wpmngr
 
 Wallpaper Manager for Xfce
