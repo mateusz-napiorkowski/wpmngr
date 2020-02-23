@@ -42,8 +42,8 @@ def browse(directory):
                   "Previous wallpaper   - 'b', 'back'\n" \
                   "Stop browsing        - 'stop', 'abort'\n" \
                   "Display this message - 'h', 'help'\n"
+        click.echo("\nBrowsing mode activated. Here's how to navigate: \n{}".format(helpmsg))
     wp_index = 0
-    click.echo("\nBrowsing mode activated. Here's how to navigate: \n{}".format(helpmsg))
     while wp_index != len(wallpapers):
         wp_path = directory + wallpapers[wp_index]
         name = subprocess.getoutput('identify -format %f {}'.format(wp_path))
@@ -58,7 +58,7 @@ def browse(directory):
         instruction = input('>> ').lower()
         while instruction not in ['', 'n', 'next', 'b', 'back', 'stop', 'abort', 'h', 'help']:
             click.echo('Wrong input! Try again.\n{}'.format(helpmsg))
-            instruction = input().lower()
+            instruction = input('>> ').lower()
         if instruction in ['', 'n', 'next']:
             wp_index += 1
         elif instruction in ['b', 'back']:
