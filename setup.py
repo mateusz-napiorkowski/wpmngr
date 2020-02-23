@@ -25,6 +25,6 @@ setuptools.setup(
     ],
     entry_points='''
             [console_scripts]
-            setwp=wpmngr.wpmngr:setwp
+            wpmngr=wpmngr.wpmngr:wpmngr
         ''',
 )
